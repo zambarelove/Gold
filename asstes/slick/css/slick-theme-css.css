@@ -1,0 +1,345 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('./fonts/slick.eot');
+    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+}
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    color: black;
+    outline: none;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.responsive .slick-prev
+{   
+    top: 480px;
+    left: 180px;
+}
+.responsive-2 .slick-prev
+{   
+    top: 150px;
+    left: -20px;
+    z-index: 1;
+}
+
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+.responsive .slick-prev:before
+{
+    content: '←';
+    color: black;
+    font-size: 52px;
+    line-height: 76px;
+    color: #828181;
+}
+.responsive-2 .slick-prev:before{
+    content: url('../../images/slider-img/menu-left.png');
+    color: black;
+    font-size: 52px;
+    line-height: 76px;
+    color: #828181;
+}
+
+[dir='rtl'] .slick-prev:before
+{
+    content: '→';
+}
+
+.responsive .slick-next
+{
+    top: 480px;
+    right: 205px;
+    color: black;
+}
+.responsive-2 .slick-next
+{
+    top: 150px;
+    right: 20px;
+    color: black;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
+.responsive .slick-next:before
+{
+    content: '→';
+    color: black;
+    font-size: 52px;
+    line-height: 76px;
+    color: #828181;
+}
+.responsive-2 .slick-next:before
+{
+    content: url('../../images/slider-img/menu-right-arrow.png');
+    color: black;
+    font-size: 52px;
+    line-height: 76px;
+    color: #828181;
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '←';
+}
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    margin-bottom: 0px;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: 100px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 82px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: 1;
+    color: #51b5ef;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before{
+    opacity: 1;
+    color: black;
+}
+
+
+
+@media screen and (max-width:1326px) {
+    .responsive .slick-prev{   
+        top: 480px;
+        left: 180px;
+        color: #000;
+    }
+    .responsive .slick-next{
+        top: 470px;
+        right: 205px;
+        color: black;
+    }
+}
+@media screen and (max-width:1098px) {
+    .responsive .slick-prev{   
+        top: 320px;
+        left: 180px;
+    }
+    .responsive .slick-next{
+        top: 320px;
+        right: 205px;
+        color: black;
+    }
+}
+@media screen and (max-width:992px) {
+    .responsive .slick-prev{   
+        top: 310px;
+        left: 180px;
+    }
+    .responsive .slick-next{
+    top: 310px;
+    right: 205px;
+    color: black;
+    }
+}
+@media screen and (max-width:768px) {
+    .responsive .slick-prev{   
+        top: 300px;
+        left: 130px;
+    }
+    .responsive .slick-next{
+    top: 300px;
+    right: 170px;
+    color: black;
+    }
+    .responsive-2 .slick-prev{
+        top: 380px;
+        left: 270px;
+        color: black;
+    }
+    .responsive-2 .slick-next{
+    top: 380px;
+    right: 285px;
+    color: black;
+    }
+    .responsive-3 .slick-dots{
+        position: absolute;
+        bottom: 130px;
+    }
+}
+@media screen and (max-width:576px) {
+    .responsive .slick-prev{   
+        top: 300px;
+        left: 130px;
+    }
+    .responsive .slick-next{
+    top: 300px;
+    right: 170px;
+    color: black;
+    }
+    .responsive-2 .slick-prev{   
+        top: 330px;
+        left: 130px;
+    }
+    .responsive-2 .slick-next{
+    top: 330px;
+    right: 170px;
+    color: black;
+}
+}
+@media screen and (max-width:320px) and (max-width:425px) {
+    .responsive .slick-prev{   
+        top: 260px;
+        left: 100px;
+    }
+    .responsive .slick-next{
+    top: 260px;
+    right: 140px;
+    color: black;
+    }
+    .responsive-2 .slick-prev{
+        top: 345px;
+        left: 50px;
+        color: black;
+        }
+    .responsive-2 .slick-next{
+    top: 345px;
+    right: 85px;
+    color: black;
+    }
+}
